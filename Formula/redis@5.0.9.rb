@@ -7,7 +7,7 @@ class RedisAT509 < Formula
 
   def install
     # Architecture isn't detected correctly on 32bit Snow Leopard without help
-    ENV["OBJARCH"] = "-arch #{MacOS.preferred_arch}"
+    ENV["OBJARCH"] = "-arch #{Hardware::CPU.arch}"
 
     system "make", "install", "PREFIX=#{prefix}", "CC=#{ENV.cc}"
 
