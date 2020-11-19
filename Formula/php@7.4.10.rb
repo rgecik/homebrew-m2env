@@ -346,7 +346,7 @@ class PhpAT7410 < Formula
         ServerName localhost:#{port}
         DocumentRoot "#{testpath}"
         ErrorLog "#{testpath}/httpd-error.log"
-        ServerRoot "#{Formula["httpd"].opt_prefix}"
+        ServerRoot "/usr/local/opt/httpd"
         PidFile "#{testpath}/httpd.pid"
         LoadModule authz_core_module lib/httpd/modules/mod_authz_core.so
         LoadModule unixd_module lib/httpd/modules/mod_unixd.so
@@ -405,7 +405,7 @@ class PhpAT7410 < Formula
         exec sbin/"php-fpm", "-y", "fpm.conf"
       end
       pid = fork do
-        exec Formula["httpd"].opt_bin/"httpd", "-X", "-f", "#{testpath}/httpd-fpm.conf"
+        exec "/usr/local/opt/httpd/bin/httpd", "-X", "-f", "#{testpath}/httpd-fpm.conf"
       end
       sleep 3
 
