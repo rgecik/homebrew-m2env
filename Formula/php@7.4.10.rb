@@ -324,7 +324,7 @@ class PhpAT7410 < Formula
     # Test related to libxml2 and
     # https://github.com/Homebrew/homebrew-core/issues/28398
     assert_includes MachO::Tools.dylibs("#{bin}/php"),
-      "#{Formula["libpq"].opt_lib}/libpq.5.dylib"
+      "/usr/local/opt/libpq/lib/libpq.5.dylib"
     system "#{sbin}/php-fpm", "-t"
     system "#{bin}/phpdbg", "-V"
     system "#{bin}/php-cgi", "-m"
@@ -392,7 +392,7 @@ class PhpAT7410 < Formula
       EOS
 
       pid = fork do
-        exec Formula["httpd"].opt_bin/"httpd", "-X", "-f", "#{testpath}/httpd.conf"
+        exec "/usr/local/opt/httpd/bin/httpd", "-X", "-f", "#{testpath}/httpd.conf"
       end
       sleep 3
 
