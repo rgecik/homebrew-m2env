@@ -140,12 +140,12 @@ class PhpAT7410 < Formula
       --with-ffi
       --with-fpm-user=_www
       --with-fpm-group=_www
-      --with-gettext=#{Formula["gettext"].opt_prefix}
-      --with-gmp=#{Formula["gmp"].opt_prefix}
+      --with-gettext=/usr/local/opt/gettext
+      --with-gmp=/usr/local/opt/gmp
       --with-iconv#{headers_path}
       --with-kerberos
       --with-layout=GNU
-      --with-ldap=#{Formula["openldap"].opt_prefix}
+      --with-ldap=/usr/local/opt/openldap
       --with-ldap-sasl
       --with-libxml
       --with-libedit
@@ -154,18 +154,18 @@ class PhpAT7410 < Formula
       --with-mysqli=mysqlnd
       --with-ndbm#{headers_path}
       --with-openssl
-      --with-password-argon2=#{Formula["argon2"].opt_prefix}
-      --with-pdo-dblib=#{Formula["freetds"].opt_prefix}
+      --with-password-argon2=/usr/local/opt/argon2
+      --with-pdo-dblib=/usr/local/opt/freetds
       --with-pdo-mysql=mysqlnd
-      --with-pdo-odbc=unixODBC,#{Formula["unixodbc"].opt_prefix}
-      --with-pdo-pgsql=#{Formula["libpq"].opt_prefix}
+      --with-pdo-odbc=unixODBC,/usr/local/opt/unixodbc
+      --with-pdo-pgsql=/usr/local/opt/libpq
       --with-pdo-sqlite
-      --with-pgsql=#{Formula["libpq"].opt_prefix}
+      --with-pgsql=/usr/local/opt/libpq
       --with-pic
-      --with-pspell=#{Formula["aspell"].opt_prefix}
+      --with-pspell=/usr/local/opt/aspell
       --with-sodium
       --with-sqlite3
-      --with-tidy=#{Formula["tidy-html5"].opt_prefix}
+      --with-tidy=/usr/local/opt/tidy-html5
       --with-unixODBC
       --with-xmlrpc
       --with-xsl
