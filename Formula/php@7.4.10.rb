@@ -132,6 +132,7 @@ class PhpAT7410 < Formula
       --enable-sysvmsg
       --enable-sysvsem
       --enable-sysvshm
+      --with-apxs=/usr/local/opt/httpd/bin/apxs
       --with-bz2#{headers_path}
       --with-curl
       --with-external-gd
